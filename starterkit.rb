@@ -299,6 +299,9 @@ append_to_file ".gitignore", ".DS_Store\n"
 git :init
 git add: ".", commit: %(-m 'Initial commit')
 
+# Add solid_queue to the Procfile.dev
+append_to_file "Procfile.dev", "solid_queue: bundle exec rake solid_queue:start\n"
+
 # Enable UUIDs for the database
 # Create a migration to enable the pgcrypto extension
 migration_name = "EnablePgcryptoExtension"
