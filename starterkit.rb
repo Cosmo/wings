@@ -51,6 +51,7 @@ if ARGV.include?("--default-gems") || yes?(set_color("Would you like to add reco
     gem "rubocop"
     gem "rspec-rails"
     gem "rubocop-rspec"
+    gem "rubocop-rspec_rails"
     gem "factory_bot_rails"
   end
 
