@@ -319,11 +319,18 @@ initializer "uuid_primary_key.rb", <<-EOF.strip_heredoc
 EOF
 
 after_bundle do
+  # Initialize RSpec
+  generate "rspec:install"
+
   # Initialize SolidQueue
   generate "solid_queue:install"
 
   # Initialize LiveReload
   generate "rails_live_reload:install"
 
+  # Initialize ActionPolicy
   generate "action_policy:install"
+
+  # Initialize ActiveStorage
+  rails_command "active_storage:install"
 end
