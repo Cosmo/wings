@@ -18,6 +18,13 @@ If you have to deal with a [Zscaler proxy](#zscaler), you can use the following 
 rails new myapp --css tailwind --asset-pipeline propshaft --database postgresql --devcontainer --template "https://raw.githubusercontent.com/Cosmo/wings/main/starterkit.rb" --zscaler
 ```
 
+If you want everything to be installed, you can use the following command:
+
+```bash
+rails new myapp --css tailwind --asset-pipeline propshaft --database postgresql --devcontainer --template "https://raw.githubusercontent.com/Cosmo/wings/main/starterkit.rb" --zscaler --default-gems --add-vscode-extensions --add-vscode-launch
+```
+
+
 ## Zscaler
 
 Add this to your `.zshrc` or `.bashrc`.
