@@ -336,5 +336,5 @@ after_bundle do
   rails_command "active_storage:install"
 
   # Add solid_queue to the Procfile.dev
-  append_to_file "Procfile.dev", "solid_queue: bundle exec rake solid_queue:start\n"
+  append_to_file "Procfile.dev", "jobs: bundle exec rake solid_queue:start\n"
 end
