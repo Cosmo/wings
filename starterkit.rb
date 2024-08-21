@@ -1,8 +1,3 @@
-# Rails Template to setup a new Rails project with the DevContainer
-# Usage:
-#   rails new myapp --template template.rb
-#   rails new myapp --css tailwind --asset-pipeline propshaft --database postgresql --devcontainer --template rails_starterkit.rb
-
 if ARGV.include?("--zscaler")
   # Set the default path to the Zscaler certificate
   zscaler_default_certificate_path = "~/.development/Zscaler_Root_CA.crt"
@@ -13,7 +8,7 @@ if ARGV.include?("--zscaler")
     zscaler_custom_certificate_path = zscaler_default_certificate_path
   else
     # Ask the user for the path to the Zscaler certificate
-    zscaler_custom_certificate_path = ask(set_color("What is the path to the Zscaler certificate? (Enter to use #{zscaler_default_certificate_path} as default path)", :white, :on_black)).presence || ARGV.include?("--zscaler-use-default-path")
+    zscaler_custom_certificate_path = ask(set_color("What is the path to the Zscaler certificate? (Press [Return] to use #{zscaler_default_certificate_path} as default path)", :white, :on_black)).presence || ARGV.include?("--zscaler-use-default-path")
   end
 
   # Add the Zscaler certificate to the project
