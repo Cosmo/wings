@@ -308,7 +308,7 @@ migration_file_name = "#{Time.now.strftime("%Y%m%d%H%M%S")}_#{migration_name.und
 migration_content = <<-RUBY
   class #{migration_name} < ActiveRecord::Migration[6.0]
     def change
-      enable_extension "pgcrypto" unless extension_enabled?("pgcrypto")
+      enable_extension "pgcrypto"
     end
   end
 RUBY
